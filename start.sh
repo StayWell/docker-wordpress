@@ -1,5 +1,8 @@
 #!/bin/sh -ex
 
+# recommended WordPress settings for Divi
+# https://www.canagon.com/blog/divi-recommended-configuration-for-server-and-hosting-environment
+# https://www.georgenicolaou.me/divi-requirements/
 cat > "/var/www/html/.htaccess" << EOF
 php_value upload_max_filesize ${UPLOAD_MAX_FILESIZE:-256M}
 php_value post_max_size ${POST_MAX_SIZE:-512M}
