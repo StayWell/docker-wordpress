@@ -13,4 +13,9 @@ php_value max_input_vars ${MAX_INPUT_VARS:-3000}
 php_value output_buffering ${OUTPUT_BUFFERING:-9096}
 EOF
 
+chown www-data:www-data /var/www/html/.htaccess
+
+mkdir -p /var/www/html/wp-content
+chown -R www-data:www-data /var/www/html/wp-content
+
 docker-entrypoint.sh apache2-foreground
