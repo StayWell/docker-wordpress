@@ -1,0 +1,13 @@
+#!/bin/sh -ex
+
+cat > "/var/www/html/.htaccess" << EOF
+php_value upload_max_filesize ${UPLOAD_MAX_FILESIZE:-256M}
+php_value post_max_size ${POST_MAX_SIZE:-512M}
+php_value memory_limit ${MEMORY_LIMIT:-4096M}
+php_value max_execution_time ${MAX_EXECUTION_TIME:-300}
+php_value max_input_time ${MAX_INPUT_TIME:-600}
+php_value max_input_vars ${MAX_INPUT_VARS:-3000}
+php_value output_buffering ${OUTPUT_BUFFERING:-9096}
+EOF
+
+docker-entrypoint.sh apache2-foreground
