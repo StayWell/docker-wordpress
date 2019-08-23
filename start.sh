@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/sh
 
 # recommended WordPress settings for Divi
 # https://www.canagon.com/blog/divi-recommended-configuration-for-server-and-hosting-environment
