@@ -1,4 +1,4 @@
-FROM wordpress:5.2.2
+FROM wordpress:5.4.2
 
 COPY start.sh /usr/local/bin/
 
